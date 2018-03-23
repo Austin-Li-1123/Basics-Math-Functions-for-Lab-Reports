@@ -1,0 +1,43 @@
+//please enter the input values at the bottom and run the file
+public class math {
+	
+	public static double average(double[] arr) {
+		double ave = 0;
+		for (int i = 0; i < arr.length; i++) {
+			ave += arr[i];
+		}
+		ave = ave / (double) arr.length;
+		return ave;
+	}
+	public static double sD(double[] arr, double average) {
+		double ave = (double) average;
+		double sD = 0;
+		for (int i = 0; i < arr.length; i++) {
+			double temp = (Math.abs(arr[i] - ave));
+			temp = temp * temp;
+			sD += temp;
+		}
+		sD = sD / (double) (arr.length - 1);
+		sD = Math.sqrt(sD);
+		return sD;
+	}
+	public static double pError(double wrong, double right) {
+		double temp = Math.abs(wrong - right);
+		temp = temp / right;
+		temp *= 100;
+		return temp;
+	}
+//please don't edit anything above this comment.	
+	public static void main(String[] args) {
+	
+		
+		double[] array = {};
+		
+		System.out.println(average(array));
+		System.out.println(sD(array, average(array)));
+		//enter the numbers for percentage error here:
+		//first one is lab result and the second one is expected value
+		System.out.println(pError(, ));
+		
+		
+	}
